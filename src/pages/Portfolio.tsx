@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Navigation from '../components/Navigation';
 import { 
   GithubLogo, 
   LinkedinLogo, 
@@ -188,6 +189,9 @@ const Portfolio = () => {
 
   return (
     <div ref={containerRef} className="relative min-h-screen">
+      {/* Navigation */}
+      <Navigation />
+      
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="glow-orb glow-orb-1 w-64 h-64 bg-neon-blue/20 top-20 left-10"></div>
@@ -196,7 +200,7 @@ const Portfolio = () => {
       </div>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8">
+      <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <div className="mb-6">
@@ -245,7 +249,7 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="py-20 px-6 lg:px-8">
+      <section id="about" ref={aboutRef} className="py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="about-image">
@@ -297,7 +301,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectsRef} className="py-20 px-6 lg:px-8">
+      <section id="projects" ref={projectsRef} className="py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -346,7 +350,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactRef} className="py-20 px-6 lg:px-8">
+      <section id="contact" ref={contactRef} className="py-20 px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
