@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
+import SplineBackground from '../components/SplineBackground';
 import { 
   GraduationCap, 
   BookOpen, 
@@ -161,6 +162,9 @@ const Education = () => {
     <div ref={containerRef} className="relative min-h-screen">
       {/* Navigation */}
       <Navigation />
+      
+      {/* Spline Background Animation */}
+      <SplineBackground />
       
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
