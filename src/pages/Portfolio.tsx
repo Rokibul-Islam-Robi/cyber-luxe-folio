@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
+import PlanetAnimation from '../components/PlanetAnimation';
 import { 
   GithubLogo, 
   LinkedinLogo, 
@@ -191,6 +192,16 @@ const Portfolio = () => {
     <div ref={containerRef} className="relative min-h-screen">
       {/* Navigation */}
       <Navigation />
+      
+      {/* Planet Animation Background */}
+      <PlanetAnimation />
+      
+      {/* Floating Background Orbs */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="glow-orb glow-orb-1 w-64 h-64 bg-neon-blue/20 top-20 left-10"></div>
+        <div className="glow-orb glow-orb-2 w-48 h-48 bg-neon-purple/30 top-1/3 right-20"></div>
+        <div className="glow-orb glow-orb-3 w-32 h-32 bg-neon-cyan/25 bottom-1/4 left-1/3"></div>
+      </div>
       
       {/* Hero Section */}
       <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
