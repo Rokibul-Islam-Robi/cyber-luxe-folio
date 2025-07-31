@@ -1,0 +1,289 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Navigation from '../components/Navigation';
+import { 
+  Code, 
+  Palette, 
+  Rocket, 
+  Monitor, 
+  Globe, 
+  Database,
+  Cloud,
+  Shield,
+  Lightning,
+  Cpu,
+  DeviceMobile,
+  Server
+} from 'phosphor-react';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const TechStack = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Hero animations
+      gsap.fromTo('.tech-hero-title', 
+        { opacity: 0, y: 60, filter: 'blur(10px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out', delay: 0.3 }
+      );
+
+      gsap.fromTo('.tech-hero-subtitle', 
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.6 }
+      );
+
+      // Category animations
+      ScrollTrigger.create({
+        trigger: '.frontend-section',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.fromTo('.tech-card', 
+            { opacity: 0, y: 40, scale: 0.8 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)', stagger: 0.1 }
+          );
+        }
+      });
+
+      ScrollTrigger.create({
+        trigger: '.backend-section',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.fromTo('.backend-card', 
+            { opacity: 0, x: -40 },
+            { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', stagger: 0.15 }
+          );
+        }
+      });
+
+      ScrollTrigger.create({
+        trigger: '.tools-section',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.fromTo('.tool-card', 
+            { opacity: 0, y: 40, filter: 'blur(3px)' },
+            { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out', stagger: 0.1 }
+          );
+        }
+      });
+
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const frontendTech = [
+    { name: 'React', icon: Monitor, level: 95, color: 'text-cyan-400', bg: 'from-cyan-500/20 to-cyan-600/20' },
+    { name: 'TypeScript', icon: Code, level: 90, color: 'text-blue-400', bg: 'from-blue-500/20 to-blue-600/20' },
+    { name: 'JavaScript', icon: Lightning, level: 92, color: 'text-yellow-400', bg: 'from-yellow-500/20 to-yellow-600/20' },
+    { name: 'HTML/CSS', icon: Palette, level: 88, color: 'text-orange-400', bg: 'from-orange-500/20 to-orange-600/20' },
+    { name: 'Tailwind CSS', icon: Globe, level: 85, color: 'text-teal-400', bg: 'from-teal-500/20 to-teal-600/20' },
+    { name: 'Next.js', icon: Rocket, level: 80, color: 'text-gray-400', bg: 'from-gray-500/20 to-gray-600/20' }
+  ];
+
+  const backendTech = [
+    { name: 'Node.js', icon: Server, level: 88, color: 'text-green-400', bg: 'from-green-500/20 to-green-600/20' },
+    { name: 'Python', icon: Cpu, level: 85, color: 'text-blue-500', bg: 'from-blue-500/20 to-blue-600/20' },
+    { name: 'PostgreSQL', icon: Database, level: 82, color: 'text-blue-600', bg: 'from-blue-600/20 to-blue-700/20' },
+    { name: 'MongoDB', icon: Database, level: 80, color: 'text-green-500', bg: 'from-green-500/20 to-green-600/20' },
+    { name: 'Express.js', icon: Server, level: 85, color: 'text-gray-400', bg: 'from-gray-500/20 to-gray-600/20' },
+    { name: 'GraphQL', icon: Globe, level: 78, color: 'text-pink-400', bg: 'from-pink-500/20 to-pink-600/20' }
+  ];
+
+  const toolsTech = [
+    { name: 'Git', icon: Code, level: 90, color: 'text-orange-500', bg: 'from-orange-500/20 to-orange-600/20' },
+    { name: 'Docker', icon: Cloud, level: 75, color: 'text-blue-500', bg: 'from-blue-500/20 to-blue-600/20' },
+    { name: 'AWS', icon: Cloud, level: 70, color: 'text-yellow-500', bg: 'from-yellow-500/20 to-yellow-600/20' },
+    { name: 'Figma', icon: Palette, level: 85, color: 'text-purple-400', bg: 'from-purple-500/20 to-purple-600/20' },
+    { name: 'VS Code', icon: Monitor, level: 95, color: 'text-blue-400', bg: 'from-blue-500/20 to-blue-600/20' },
+    { name: 'Postman', icon: Shield, level: 80, color: 'text-orange-400', bg: 'from-orange-500/20 to-orange-600/20' }
+  ];
+
+  return (
+    <div ref={containerRef} className="relative min-h-screen">
+      {/* Navigation */}
+      <Navigation />
+      
+      {/* Floating Background Orbs */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="glow-orb glow-orb-1 w-64 h-64 bg-neon-blue/20 top-20 left-10"></div>
+        <div className="glow-orb glow-orb-2 w-48 h-48 bg-neon-purple/30 top-1/3 right-20"></div>
+        <div className="glow-orb glow-orb-3 w-32 h-32 bg-neon-cyan/25 bottom-1/4 left-1/3"></div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
+        <div className="container mx-auto text-center">
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/20 text-neon-blue text-sm font-medium mb-6">
+              Tech Stack
+            </span>
+          </div>
+          
+          <h1 className="tech-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            My <span className="text-gradient">Technology</span>
+            <br />
+            <span className="text-text-secondary text-3xl md:text-4xl lg:text-5xl">
+              Stack
+            </span>
+          </h1>
+          
+          <p className="tech-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+            A comprehensive collection of modern technologies and tools I use to build innovative solutions. 
+            From frontend frameworks to backend services, I stay current with the latest industry standards.
+          </p>
+        </div>
+      </section>
+
+      {/* Frontend Technologies */}
+      <section className="frontend-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Frontend <span className="text-gradient">Technologies</span>
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Modern frameworks and libraries for creating responsive and interactive user interfaces.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {frontendTech.map((tech, index) => (
+              <div key={tech.name} className="tech-card glass-card p-6 hover:shadow-glow-blue transition-all duration-300 group">
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.bg} mr-4`}>
+                    <tech.icon size={32} className={tech.color} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-text-primary">{tech.name}</h3>
+                    <span className="text-neon-blue font-bold">{tech.level}%</span>
+                  </div>
+                </div>
+                <div className="w-full bg-glass-border/20 rounded-full h-2">
+                  <div 
+                    className={`h-full bg-gradient-to-r from-neon-blue to-neon-cyan rounded-full transition-all duration-1000 ease-out`}
+                    style={{ width: `${tech.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Backend Technologies */}
+      <section className="backend-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Backend <span className="text-gradient">Technologies</span>
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Server-side technologies and databases for building robust and scalable applications.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {backendTech.map((tech, index) => (
+              <div key={tech.name} className="backend-card glass-card p-6 hover:shadow-glow-purple transition-all duration-300 group">
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.bg} mr-4`}>
+                    <tech.icon size={32} className={tech.color} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-text-primary">{tech.name}</h3>
+                    <span className="text-neon-purple font-bold">{tech.level}%</span>
+                  </div>
+                </div>
+                <div className="w-full bg-glass-border/20 rounded-full h-2">
+                  <div 
+                    className={`h-full bg-gradient-to-r from-neon-purple to-neon-pink rounded-full transition-all duration-1000 ease-out`}
+                    style={{ width: `${tech.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools & Services */}
+      <section className="tools-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Tools & <span className="text-gradient">Services</span>
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Development tools, cloud services, and platforms that enhance productivity and deployment.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {toolsTech.map((tool, index) => (
+              <div key={tool.name} className="tool-card glass-card p-6 hover:shadow-glow-cyan transition-all duration-300 group">
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tool.bg} mr-4`}>
+                    <tool.icon size={32} className={tool.color} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-text-primary">{tool.name}</h3>
+                    <span className="text-neon-cyan font-bold">{tool.level}%</span>
+                  </div>
+                </div>
+                <div className="w-full bg-glass-border/20 rounded-full h-2">
+                  <div 
+                    className={`h-full bg-gradient-to-r from-neon-cyan to-neon-blue rounded-full transition-all duration-1000 ease-out`}
+                    style={{ width: `${tool.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Section */}
+      <section className="py-20 px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="glass-card p-8 text-center">
+            <h3 className="text-2xl font-bold text-text-primary mb-4">
+              Always Learning
+            </h3>
+            <p className="text-text-secondary text-lg mb-6">
+              Technology evolves rapidly, and I'm committed to staying current with the latest trends, 
+              frameworks, and best practices in software development.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <span className="px-4 py-2 bg-neon-blue/10 text-neon-blue rounded-full text-sm">
+                Machine Learning
+              </span>
+              <span className="px-4 py-2 bg-neon-purple/10 text-neon-purple rounded-full text-sm">
+                Blockchain
+              </span>
+              <span className="px-4 py-2 bg-neon-cyan/10 text-neon-cyan rounded-full text-sm">
+                Web3
+              </span>
+              <span className="px-4 py-2 bg-neon-pink/10 text-neon-pink rounded-full text-sm">
+                AI/ML
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
+        <div className="container mx-auto text-center">
+          <p className="text-text-muted mb-4">
+            © 2024 TASNIA. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default TechStack; 
