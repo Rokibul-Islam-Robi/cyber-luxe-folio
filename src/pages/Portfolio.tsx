@@ -120,6 +120,18 @@ const Portfolio = () => {
         }
       });
 
+      // Contact info section animations
+      ScrollTrigger.create({
+        trigger: '.contact-info-section',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.fromTo('.corporate-contact-card', 
+            { opacity: 0, y: 60, scale: 0.95 },
+            { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' }
+          );
+        }
+      });
+
       // Projects section animations
       ScrollTrigger.create({
         trigger: projectsRef.current,
@@ -312,6 +324,143 @@ const Portfolio = () => {
                 <button className="glass-card px-6 py-3 border border-glass-border/30 text-text-primary hover:border-neon-purple/50 transition-all duration-300">
                   View Projects
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="contact-info-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Contact Information
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Get in touch with me for collaborations, opportunities, or just to say hello.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="corporate-contact-card relative glass-card p-8 lg:p-12 overflow-hidden">
+              {/* Animated Border */}
+              <div className="absolute inset-0 border-2 border-transparent rounded-xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-[2px] bg-background rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Personal Info */}
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="glass-card p-3 rounded-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-text-primary">Rokibul Islam Robi</h3>
+                        <p className="text-text-secondary">Software Engineer & Developer</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-4">
+                        <div className="glass-card p-2 rounded-lg">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-purple">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-text-secondary text-sm">Contact Number</p>
+                          <p className="text-text-primary font-medium">01531150655</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <div className="glass-card p-2 rounded-lg">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-cyan">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-text-secondary text-sm">Primary Email</p>
+                          <p className="text-text-primary font-medium">rokebul.islam088@gmail.com</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <div className="glass-card p-2 rounded-lg">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-text-secondary text-sm">Academic Email</p>
+                          <p className="text-text-primary font-medium">islam222053411672diu.edu.bd</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Quick Actions */}
+                  <div className="space-y-6">
+                    <h4 className="text-lg font-semibold text-text-primary mb-4">Quick Actions</h4>
+                    <div className="space-y-3">
+                      <button className="w-full glass-card p-4 text-left hover:border-neon-blue/50 transition-all duration-300 border border-glass-border/30 rounded-lg group">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-neon-blue/10">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                              </svg>
+                            </div>
+                            <span className="text-text-primary font-medium">Download CV</span>
+                          </div>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-text-secondary group-hover:text-neon-blue transition-colors">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 19l8-8-8-8z"/>
+                          </svg>
+                        </div>
+                      </button>
+                      
+                      <button className="w-full glass-card p-4 text-left hover:border-neon-purple/50 transition-all duration-300 border border-glass-border/30 rounded-lg group">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-neon-purple/10">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-purple">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                              </svg>
+                            </div>
+                            <span className="text-text-primary font-medium">Send Email</span>
+                          </div>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-text-secondary group-hover:text-neon-purple transition-colors">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 19l8-8-8-8z"/>
+                          </svg>
+                        </div>
+                      </button>
+                      
+                      <button className="w-full glass-card p-4 text-left hover:border-neon-cyan/50 transition-all duration-300 border border-glass-border/30 rounded-lg group">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-neon-cyan/10">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-cyan">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                              </svg>
+                            </div>
+                            <span className="text-text-primary font-medium">Schedule Call</span>
+                          </div>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-text-secondary group-hover:text-neon-cyan transition-colors">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 19l8-8-8-8z"/>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
