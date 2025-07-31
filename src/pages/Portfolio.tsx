@@ -515,21 +515,58 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
-        <div className="container mx-auto text-center">
-          <p className="text-text-muted mb-4">
-            © 2024 ROBI. All rights reserved.
-          </p>
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-text-secondary hover:text-neon-blue transition-colors">
-              <GithubLogo size={24} />
-            </a>
-            <a href="#" className="text-text-secondary hover:text-neon-purple transition-colors">
-              <LinkedinLogo size={24} />
-            </a>
-            <a href="#" className="text-text-secondary hover:text-neon-cyan transition-colors">
-              <EnvelopeSimple size={24} />
-            </a>
+      <footer className="py-16 px-6 lg:px-8 border-t border-glass-border/20">
+        <div className="container mx-auto">
+          {/* Main Footer Content */}
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Get in Touch */}
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Get in Touch</h3>
+              <div className="flex justify-center md:justify-start gap-4">
+                <a href="https://github.com/rokibulrobi" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-blue transition-colors">
+                  <GithubLogo size={24} />
+                </a>
+                <a href="https://linkedin.com/in/rokibulrobi" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-purple transition-colors">
+                  <LinkedinLogo size={24} />
+                </a>
+                <a href="https://twitter.com/rokibulrobi" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-cyan transition-colors">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-text-secondary hover:text-neon-cyan transition-colors">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a href="mailto:hello@rokibulrobi.dev" className="text-text-secondary hover:text-neon-blue transition-colors">
+                  <EnvelopeSimple size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Quick Links</h3>
+              <div className="space-y-2">
+                <a href="#about" className="block text-neon-purple hover:text-neon-blue transition-colors">About</a>
+                <a href="#projects" className="block text-neon-purple hover:text-neon-blue transition-colors">Projects</a>
+                <a href="/education" className="block text-neon-purple hover:text-neon-blue transition-colors">Courses</a>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="text-center md:text-right">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Newsletter</h3>
+              <p className="text-text-secondary text-sm mb-4">
+                Subscribe to get updates about new courses and projects.
+              </p>
+              <button className="px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-medium rounded-lg hover:shadow-glow-purple transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-glass-border/20 pt-8 text-center">
+            <p className="text-text-muted">
+              © 2024 Rokibul Islam Robi Portfolio. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
