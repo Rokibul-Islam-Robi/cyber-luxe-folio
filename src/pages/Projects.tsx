@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
-import SplineBackground from '../components/SplineBackground';
+import PlanetAnimation from '../components/PlanetAnimation';
 import ProjectCard from '../components/ProjectCard';
 import ProjectManager from '../components/ProjectManager';
 import { getFeaturedProjects, getAllProjects } from '../data/projects';
@@ -75,8 +75,8 @@ const Projects = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Spline Background Animation */}
-      <SplineBackground />
+      {/* Planet Animation Background */}
+      <PlanetAnimation />
       
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">

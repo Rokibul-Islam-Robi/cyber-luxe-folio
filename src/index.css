@@ -83,6 +83,26 @@
     overflow-x: hidden;
   }
   
+  /* Ensure text and components have high contrast against background animation */
+  .text-text-primary {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+  }
+  
+  .text-text-secondary {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(20px) saturate(1.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(33, 150, 243, 0.1);
+  }
+  
+  .neon-button {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+  }
+  
   html {
     scroll-behavior: smooth;
   }

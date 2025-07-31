@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
-import SplineBackground from '../components/SplineBackground';
+import PlanetAnimation from '../components/PlanetAnimation';
 import { 
   GithubLogo, 
   LinkedinLogo, 
@@ -193,8 +193,8 @@ const Portfolio = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Spline Background Animation */}
-      <SplineBackground />
+      {/* Planet Animation Background */}
+      <PlanetAnimation />
       
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -205,8 +205,8 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
             <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Hi, I'm{' '}
               <span className="text-white">Rokibul Islam Robi</span>
@@ -220,7 +220,7 @@ const Portfolio = () => {
               Crafting digital experiences that inspire and engage through innovative design and cutting-edge technology.
             </p>
             
-            <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="neon-button group">
                 Hire Me
                 <ArrowRight size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
@@ -232,7 +232,17 @@ const Portfolio = () => {
             </div>
           </div>
           
-
+          <div className="spline-container lg:h-screen flex items-center justify-center">
+            <div className="w-full h-96 lg:h-full rounded-xl overflow-hidden">
+              <iframe 
+                src='https://my.spline.design/particleplanet-5e0fIrNj2I6HQxOgBFekzc02/' 
+                frameBorder='0' 
+                width='100%' 
+                height='100%'
+                className="pointer-events-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
