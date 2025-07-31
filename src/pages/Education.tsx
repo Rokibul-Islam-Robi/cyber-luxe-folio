@@ -178,12 +178,8 @@ const Education = () => {
             </span>
           </div>
           
-          <h1 className="education-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            My <span className="text-gradient">Educational</span>
-            <br />
-            <span className="text-text-secondary text-3xl md:text-4xl lg:text-5xl">
-              Journey
-            </span>
+          <h1 className="education-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            My Educational Journey
           </h1>
           
           <p className="education-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
@@ -208,8 +204,8 @@ const Education = () => {
       <section className="education-timeline py-20 px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Academic <span className="text-gradient">Background</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Academic Background
             </h2>
             <p className="text-text-secondary text-lg">
               My formal education and academic achievements in computer science and technology.
@@ -267,8 +263,8 @@ const Education = () => {
       <section className="certifications-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Professional <span className="text-gradient">Certifications</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Professional Certifications
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Industry-recognized certifications that validate my expertise in various technologies and methodologies.
@@ -318,8 +314,8 @@ const Education = () => {
       <section className="skills-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Skills & <span className="text-gradient">Competencies</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Skills & Competencies
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Technical and soft skills developed through education, certifications, and hands-on experience.

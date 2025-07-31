@@ -264,8 +264,8 @@ const Portfolio = () => {
             </div>
             
             <div className="about-content">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                About <span className="text-gradient">Me</span>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                About Me
               </h2>
               
               <p className="text-text-secondary text-lg mb-8 leading-relaxed">

@@ -147,8 +147,8 @@ const Projects = () => {
       <section className="all-projects-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              All <span className="text-gradient">Projects</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              All Projects
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               A comprehensive collection of my work, from small experiments to large-scale applications.

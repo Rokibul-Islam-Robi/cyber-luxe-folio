@@ -126,12 +126,8 @@ const TechStack = () => {
             </span>
           </div>
           
-          <h1 className="tech-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            My <span className="text-gradient">Technology</span>
-            <br />
-            <span className="text-text-secondary text-3xl md:text-4xl lg:text-5xl">
-              Stack
-            </span>
+          <h1 className="tech-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            My Technology Stack
           </h1>
           
           <p className="tech-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
@@ -145,8 +141,8 @@ const TechStack = () => {
       <section className="frontend-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Frontend <span className="text-gradient">Technologies</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Frontend Technologies
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Modern frameworks and libraries for creating responsive and interactive user interfaces.
@@ -181,8 +177,8 @@ const TechStack = () => {
       <section className="backend-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Backend <span className="text-gradient">Technologies</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Backend Technologies
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Server-side technologies and databases for building robust and scalable applications.
@@ -217,8 +213,8 @@ const TechStack = () => {
       <section className="tools-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Tools & <span className="text-gradient">Platforms</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Tools & Platforms
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Essential tools and platforms that streamline my development workflow and enhance productivity.
