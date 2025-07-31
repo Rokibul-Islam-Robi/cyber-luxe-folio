@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { List, X } from 'phosphor-react';
+import { List, X, Sun, Moon } from 'phosphor-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -39,6 +40,12 @@ const Navigation = () => {
     }
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    // Add theme toggle logic here
+    document.documentElement.classList.toggle('light-mode');
+  };
+
   const navItems = [
     { name: 'About Me', path: '/about' },
     { name: 'Tech Stack', path: '/tech-stack' },
@@ -67,7 +74,7 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center">
+            <div className="hidden lg:flex items-center gap-4">
               <div className="nav-container relative">
                 {navItems.map((item, index) => (
                   <Link
@@ -81,8 +88,20 @@ const Navigation = () => {
                     {item.name}
                   </Link>
                 ))}
-
               </div>
+
+              {/* Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle-btn glass-card p-2 rounded-lg border border-glass-border/30 hover:border-neon-blue/50 transition-all duration-300 hover:scale-110 hover:rotate-12 group"
+                title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              >
+                {isDarkMode ? (
+                  <Sun size={20} className="text-text-primary group-hover:text-neon-blue transition-colors" />
+                ) : (
+                  <Moon size={20} className="text-text-primary group-hover:text-neon-purple transition-colors" />
+                )}
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -102,12 +121,26 @@ const Navigation = () => {
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-glass-border/20">
             <span className="text-xl font-bold text-gradient">Menu</span>
-            <button
-              onClick={toggleMenu}
-              className="p-2 text-text-primary hover:text-neon-blue transition-colors duration-300"
-            >
-              <X size={24} />
-            </button>
+            <div className="flex items-center gap-3">
+              {/* Theme Toggle Button for Mobile */}
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle-btn glass-card p-2 rounded-lg border border-glass-border/30 hover:border-neon-blue/50 transition-all duration-300 hover:scale-110 group"
+                title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              >
+                {isDarkMode ? (
+                  <Sun size={20} className="text-text-primary group-hover:text-neon-blue transition-colors" />
+                ) : (
+                  <Moon size={20} className="text-text-primary group-hover:text-neon-purple transition-colors" />
+                )}
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="p-2 text-text-primary hover:text-neon-blue transition-colors duration-300"
+              >
+                <X size={24} />
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu Items */}
