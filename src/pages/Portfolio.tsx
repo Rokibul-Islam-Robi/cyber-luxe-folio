@@ -14,8 +14,11 @@ import {
   Rocket,
   Monitor,
   Globe,
-  Database
+  Database,
+  Medal
 } from 'phosphor-react';
+import CertificateCard from '../components/CertificateCard';
+import { getCertificates, getWorkshops } from '../data/certificates';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,6 +99,23 @@ const Portfolio = () => {
           gsap.fromTo('.skill-icon', 
             { opacity: 0, y: 30, scale: 0.8 },
             { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)', stagger: 0.1, delay: 0.5 }
+          );
+        }
+      });
+
+      // Certificates section animations
+      ScrollTrigger.create({
+        trigger: '.certificates-section',
+        start: 'top 80%',
+        onEnter: () => {
+          gsap.fromTo('.certificates-section h2', 
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+          );
+
+          gsap.fromTo('.certificates-section .certification-card', 
+            { opacity: 0, y: 60, scale: 0.9 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.7)', stagger: 0.2, delay: 0.3 }
           );
         }
       });
@@ -343,6 +363,62 @@ const Portfolio = () => {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates Section */}
+      <section className="certificates-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Certificates & Workshops
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Industry-recognized certifications and hands-on workshops that validate my expertise in various technologies.
+            </p>
+          </div>
+          
+          {/* Certificates */}
+          <div className="mb-16">
+            <div className="flex items-center justify-center mb-8">
+              <div className="glass-card p-3 rounded-lg mr-4">
+                <Medal size={32} className="text-neon-purple" />
+              </div>
+              <h3 className="text-2xl font-bold text-text-primary">Professional Certifications</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {getCertificates().slice(0, 3).map((cert) => (
+                <CertificateCard key={cert.id} certificate={cert} />
+              ))}
+            </div>
+          </div>
+          
+          {/* Workshops */}
+          <div>
+            <div className="flex items-center justify-center mb-8">
+              <div className="glass-card p-3 rounded-lg mr-4">
+                <Code size={32} className="text-neon-cyan" />
+              </div>
+              <h3 className="text-2xl font-bold text-text-primary">Workshops & Training</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {getWorkshops().slice(0, 3).map((workshop) => (
+                <CertificateCard key={workshop.id} certificate={workshop} />
+              ))}
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a 
+              href="/education" 
+              className="neon-button group"
+            >
+              View All Certificates
+              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
       </section>
