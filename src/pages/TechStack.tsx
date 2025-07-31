@@ -189,4 +189,97 @@ const TechStack = () => {
             {backendTech.map((tech, index) => (
               <div key={tech.name} className="backend-card glass-card p-6 hover:shadow-glow-purple transition-all duration-300 group">
                 <div className="flex items-center mb-4">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.bg} mr-4`
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.bg} mr-4`}>
+                    <tech.icon size={32} className={tech.color} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-text-primary">{tech.name}</h3>
+                    <span className="text-neon-purple font-bold">{tech.level}%</span>
+                  </div>
+                </div>
+                <div className="w-full bg-glass-border/20 rounded-full h-2">
+                  <div 
+                    className={`h-full bg-gradient-to-r from-neon-purple to-neon-pink rounded-full transition-all duration-1000 ease-out`}
+                    style={{ width: `${tech.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools & Platforms */}
+      <section className="tools-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Tools & <span className="text-gradient">Platforms</span>
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Essential tools and platforms that streamline my development workflow and enhance productivity.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {toolsTech.map((tech, index) => (
+              <div key={tech.name} className="tool-card glass-card p-6 hover:shadow-glow-cyan transition-all duration-300 group">
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.bg} mr-4`}>
+                    <tech.icon size={32} className={tech.color} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-text-primary">{tech.name}</h3>
+                    <span className="text-neon-cyan font-bold">{tech.level}%</span>
+                  </div>
+                </div>
+                <div className="w-full bg-glass-border/20 rounded-full h-2">
+                  <div 
+                    className={`h-full bg-gradient-to-r from-neon-cyan to-neon-blue rounded-full transition-all duration-1000 ease-out`}
+                    style={{ width: `${tech.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="glass-card p-8 text-center">
+            <h3 className="text-3xl font-bold text-text-primary mb-4">
+              Ready to Build Something Amazing?
+            </h3>
+            <p className="text-text-secondary text-lg mb-8">
+              Let's collaborate on your next project using these cutting-edge technologies. 
+              I'm always excited to work with new tools and frameworks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="neon-button group">
+                Start a Project
+                <Rocket size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
+              </button>
+              <button className="glass-card px-8 py-3 border border-glass-border/30 text-text-primary hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center">
+                <Code size={20} className="mr-2" />
+                View Projects
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
+        <div className="container mx-auto text-center">
+          <p className="text-text-muted mb-4">
+            © 2024 TASNIA. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default TechStack;
