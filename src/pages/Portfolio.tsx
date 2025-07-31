@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
+import PlanetAnimation from '../components/PlanetAnimation';
 import { 
   GithubLogo, 
   LinkedinLogo, 
@@ -27,20 +28,20 @@ const Portfolio = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero animations
+      // Hero animations with slide effects
       gsap.fromTo('.hero-title', 
-        { opacity: 0, y: 60, filter: 'blur(10px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out', delay: 0.3 }
+        { opacity: 0, x: -100, filter: 'blur(10px)' },
+        { opacity: 1, x: 0, filter: 'blur(0px)', duration: 1.5, ease: 'power3.out', delay: 0.3 }
       );
 
       gsap.fromTo('.hero-subtitle', 
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.6 }
+        { opacity: 0, x: -80 },
+        { opacity: 1, x: 0, duration: 1.2, ease: 'power3.out', delay: 0.8 }
       );
 
       gsap.fromTo('.hero-cta', 
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)', delay: 0.9 }
+        { opacity: 0, x: -60, scale: 0.8 },
+        { opacity: 1, x: 0, scale: 1, duration: 1, ease: 'back.out(1.7)', delay: 1.2 }
       );
 
       gsap.fromTo('.spline-container', 
@@ -192,6 +193,9 @@ const Portfolio = () => {
       {/* Navigation */}
       <Navigation />
       
+      {/* Planet Animation Background */}
+      <PlanetAnimation />
+      
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="glow-orb glow-orb-1 w-64 h-64 bg-neon-blue/20 top-20 left-10"></div>
@@ -203,17 +207,11 @@ const Portfolio = () => {
       <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/20 text-neon-blue text-sm font-medium mb-6">
-                Available for hire
-              </span>
-            </div>
-            
-            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Hi, I'm{' '}
-              <span className="text-gradient">Rokibul Islam Robi</span>
+              <span className="text-white">Rokibul Islam Robi</span>
               <br />
-              <span className="text-text-secondary text-3xl md:text-4xl lg:text-5xl">
+              <span className="text-white text-3xl md:text-4xl lg:text-5xl">
                 Software Engineer
               </span>
             </h1>
@@ -444,7 +442,7 @@ const Portfolio = () => {
       <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
         <div className="container mx-auto text-center">
           <p className="text-text-muted mb-4">
-            © 2024 Rokibul Islam Robi. All rights reserved.
+            © 2024 ROBI. All rights reserved.
           </p>
           <div className="flex justify-center gap-6">
             <a href="#" className="text-text-secondary hover:text-neon-blue transition-colors">

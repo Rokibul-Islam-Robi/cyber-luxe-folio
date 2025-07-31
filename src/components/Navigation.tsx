@@ -90,7 +90,7 @@ const Navigation = () => {
                 to="/"
                 className="text-2xl lg:text-3xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
               >
-                TASNIA
+                ROBI
               </Link>
             </div>
 
@@ -101,8 +101,8 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`nav-link relative inline-block text-text-secondary hover:text-text-primary transition-colors duration-300 py-2 px-6 mx-1 ${
-                      location.pathname === item.path ? 'text-neon-blue' : ''
+                    className={`nav-link relative inline-block text-text-secondary hover:text-text-primary transition-all duration-500 ease-out py-2 px-6 mx-1 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/20 ${
+                      location.pathname === item.path ? 'text-neon-blue scale-105 shadow-lg shadow-neon-blue/20' : ''
                     }`}
                   >
                     {item.name}
@@ -115,7 +115,7 @@ const Navigation = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-text-primary hover:text-neon-blue transition-colors duration-300"
+              className="lg:hidden p-2 text-text-primary hover:text-neon-blue transition-all duration-300 hover:scale-110 hover:rotate-3"
             >
               {isMenuOpen ? <X size={24} /> : <List size={24} />}
             </button>
@@ -145,9 +145,9 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={toggleMenu}
-                  className={`block w-full text-left text-lg transition-colors duration-300 py-3 border-b border-glass-border/10 hover:border-neon-blue/30 ${
+                  className={`block w-full text-left text-lg transition-all duration-500 ease-out py-3 border-b border-glass-border/10 hover:border-neon-blue/30 hover:scale-105 hover:translate-x-2 ${
                     location.pathname === item.path
-                      ? 'text-neon-blue'
+                      ? 'text-neon-blue scale-105 translate-x-2'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -161,7 +161,7 @@ const Navigation = () => {
           {/* Mobile Menu Footer */}
           <div className="p-6 border-t border-glass-border/20">
             <p className="text-text-muted text-sm text-center">
-              © 2024 TASNIA
+              © 2024 ROBI
             </p>
           </div>
         </div>
