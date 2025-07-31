@@ -67,24 +67,24 @@ const PlanetAnimation = () => {
       {/* Main Planet */}
       <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
         <div className="planet-glow absolute inset-0 bg-neon-blue/20 rounded-full blur-3xl"></div>
-        <div className="planet-core relative w-32 h-32 bg-gradient-to-br from-neon-blue/40 to-neon-purple/40 rounded-full border border-neon-blue/30">
+        <div className="planet-core relative w-20 h-20 bg-gradient-to-br from-neon-blue/40 to-neon-purple/40 rounded-full border border-neon-blue/30">
           <div className="absolute inset-2 bg-gradient-to-br from-neon-cyan/60 to-neon-blue/60 rounded-full"></div>
           <div className="absolute inset-4 bg-gradient-to-br from-background/80 to-background/40 rounded-full"></div>
         </div>
         
         {/* Planet Rings */}
-        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-neon-blue/20 rounded-full"></div>
-        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 border border-neon-purple/20 rounded-full"></div>
-        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-neon-cyan/20 rounded-full"></div>
+        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-neon-blue/20 rounded-full"></div>
+        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-neon-purple/20 rounded-full"></div>
+        <div className="planet-ring absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-neon-cyan/20 rounded-full"></div>
       </div>
 
       {/* Secondary Planets */}
       <div className="absolute top-1/4 right-1/3">
-        <div className="w-16 h-16 bg-gradient-to-br from-neon-purple/30 to-neon-pink/30 rounded-full border border-neon-purple/20"></div>
+        <div className="w-10 h-10 bg-gradient-to-br from-neon-purple/30 to-neon-pink/30 rounded-full border border-neon-purple/20"></div>
       </div>
 
       <div className="absolute bottom-1/4 right-1/6">
-        <div className="w-12 h-12 bg-gradient-to-br from-neon-cyan/30 to-neon-blue/30 rounded-full border border-neon-cyan/20"></div>
+        <div className="w-8 h-8 bg-gradient-to-br from-neon-cyan/30 to-neon-blue/30 rounded-full border border-neon-cyan/20"></div>
       </div>
 
       {/* Floating Orbs */}
@@ -101,24 +101,7 @@ const PlanetAnimation = () => {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
       </div>
 
-      {/* PARTICLE PLANET Text */}
-      <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-light tracking-wider opacity-80">
-        PARTICLE PLANET
-      </div>
 
-      {/* Size Buttons */}
-      <div className="absolute bottom-1/6 left-1/2 transform -translate-x-1/2 flex gap-2">
-        <button className="w-8 h-8 rounded-full bg-background/20 border border-neon-blue/30 text-white text-xs hover:bg-neon-blue/20 transition-all duration-300">
-          S
-        </button>
-        <button className="w-8 h-8 rounded-full bg-neon-blue/20 border border-neon-blue/50 text-white text-xs hover:bg-neon-blue/30 transition-all duration-300 relative">
-          M
-          <div className="absolute inset-1 bg-neon-blue/60 rounded-full"></div>
-        </button>
-        <button className="w-8 h-8 rounded-full bg-background/20 border border-neon-blue/30 text-white text-xs hover:bg-neon-blue/20 transition-all duration-300">
-          L
-        </button>
-      </div>
     </div>
   );
 };
