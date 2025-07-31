@@ -356,17 +356,17 @@ const Portfolio = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Personal Info */}
                   <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="glass-card p-3 rounded-lg">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
-                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-text-primary">Rokibul Islam Robi</h3>
-                        <p className="text-text-secondary">Software Engineer & Developer</p>
-                      </div>
-                    </div>
+                                         <div className="flex items-center gap-4">
+                       <div className="glass-card p-3 rounded-lg">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
+                           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                         </svg>
+                       </div>
+                       <div>
+                         <h3 className="text-xl font-bold text-text-primary">Rokibul Islam Robi</h3>
+                         <p className="text-text-secondary">Software Engineering Student</p>
+                       </div>
+                     </div>
                     
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
@@ -393,17 +393,53 @@ const Portfolio = () => {
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-4">
-                        <div className="glass-card p-2 rounded-lg">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="text-text-secondary text-sm">Academic Email</p>
-                          <p className="text-text-primary font-medium">islam222053411672diu.edu.bd</p>
-                        </div>
-                      </div>
+                                             <div className="flex items-center gap-4">
+                         <div className="glass-card p-2 rounded-lg">
+                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-blue">
+                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                           </svg>
+                         </div>
+                         <div>
+                           <p className="text-text-secondary text-sm">Academic Email</p>
+                           <p className="text-text-primary font-medium">islam222053411672diu.edu.bd</p>
+                         </div>
+                       </div>
+                       
+                       <div className="flex items-center gap-4">
+                         <div className="glass-card p-2 rounded-lg">
+                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-purple">
+                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                           </svg>
+                         </div>
+                         <div>
+                           <p className="text-text-secondary text-sm">Occupation</p>
+                           <p className="text-text-primary font-medium">Student</p>
+                         </div>
+                       </div>
+                       
+                       <div className="flex items-center gap-4">
+                         <div className="glass-card p-2 rounded-lg">
+                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-neon-cyan">
+                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                           </svg>
+                         </div>
+                         <div>
+                           <p className="text-text-secondary text-sm">Nationality</p>
+                           <p className="text-text-primary font-medium">Bangladeshi</p>
+                         </div>
+                       </div>
+                       
+                       <div className="flex items-center gap-4">
+                         <div className="glass-card p-2 rounded-lg">
+                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-red-400">
+                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                           </svg>
+                         </div>
+                         <div>
+                           <p className="text-text-secondary text-sm">Blood Group</p>
+                           <p className="text-text-primary font-medium">B+</p>
+                         </div>
+                       </div>
                     </div>
                   </div>
                   
