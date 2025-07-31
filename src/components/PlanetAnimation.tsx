@@ -6,23 +6,25 @@ const PlanetAnimation = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Create floating particles
+      // Create floating particles with different colors
       const particles = [];
-      const particleCount = 50;
+      const particleCount = 100;
+      const colors = ['bg-neon-blue/40', 'bg-orange-400/40', 'bg-yellow-400/40', 'bg-green-400/40'];
 
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
-        particle.className = 'absolute w-1 h-1 bg-neon-blue/30 rounded-full';
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        particle.className = `absolute w-1 h-1 ${color} rounded-full`;
         particle.style.left = `${Math.random() * 100}%`;
         particle.style.top = `${Math.random() * 100}%`;
         containerRef.current?.appendChild(particle);
         particles.push(particle);
 
-        // Animate each particle
+        // Animate each particle with more varied movement
         gsap.to(particle, {
-          y: -100,
+          y: Math.random() * 200 - 100,
           x: Math.random() * 200 - 100,
-          duration: Math.random() * 10 + 10,
+          duration: Math.random() * 15 + 10,
           repeat: -1,
           ease: 'none',
           delay: Math.random() * 10
@@ -97,6 +99,25 @@ const PlanetAnimation = () => {
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-cyan to-transparent"></div>
         <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-blue to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
+      </div>
+
+      {/* PARTICLE PLANET Text */}
+      <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-light tracking-wider opacity-80">
+        PARTICLE PLANET
+      </div>
+
+      {/* Size Buttons */}
+      <div className="absolute bottom-1/6 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <button className="w-8 h-8 rounded-full bg-background/20 border border-neon-blue/30 text-white text-xs hover:bg-neon-blue/20 transition-all duration-300">
+          S
+        </button>
+        <button className="w-8 h-8 rounded-full bg-neon-blue/20 border border-neon-blue/50 text-white text-xs hover:bg-neon-blue/30 transition-all duration-300 relative">
+          M
+          <div className="absolute inset-1 bg-neon-blue/60 rounded-full"></div>
+        </button>
+        <button className="w-8 h-8 rounded-full bg-background/20 border border-neon-blue/30 text-white text-xs hover:bg-neon-blue/20 transition-all duration-300">
+          L
+        </button>
       </div>
     </div>
   );

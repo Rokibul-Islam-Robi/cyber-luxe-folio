@@ -211,7 +211,7 @@ const Portfolio = () => {
               Hi, I'm{' '}
               <span className="text-white">Rokibul Islam Robi</span>
               <br />
-              <span className="text-white text-3xl md:text-4xl lg:text-5xl">
+              <span className="text-3xl md:text-4xl lg:text-5xl" style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Software Engineer
               </span>
             </h1>

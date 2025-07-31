@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
+import PlanetAnimation from '../components/PlanetAnimation';
 import { 
   Code, 
   Palette, 
@@ -105,6 +106,9 @@ const TechStack = () => {
     <div ref={containerRef} className="relative min-h-screen">
       {/* Navigation */}
       <Navigation />
+      
+      {/* Planet Animation Background */}
+      <PlanetAnimation />
       
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
