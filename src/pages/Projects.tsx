@@ -16,7 +16,9 @@ import {
   Rocket,
   Code,
   Link,
-  Plus
+  Plus,
+  LinkedinLogo,
+  EnvelopeSimple
 } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -188,11 +190,59 @@ const Projects = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
-        <div className="container mx-auto text-center">
-          <p className="text-text-muted mb-4">
-            © 2024 TASNIA. All rights reserved.
-          </p>
+      <footer className="py-16 px-6 lg:px-8 border-t border-glass-border/20">
+        <div className="container mx-auto">
+          {/* Main Footer Content */}
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Get in Touch */}
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Get in Touch</h3>
+              <div className="flex justify-center md:justify-start gap-4">
+                <a href="https://github.com/Rokibul-Islam-Robi" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-blue transition-colors">
+                  <GithubLogo size={24} />
+                </a>
+                <a href="https://www.linkedin.com/in/rokibulislam088?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-purple transition-colors">
+                  <LinkedinLogo size={24} />
+                </a>
+                <a href="https://www.facebook.com/Its.Robbii?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-neon-cyan transition-colors">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-text-secondary hover:text-neon-cyan transition-colors">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="mailto:hello@rokibulrobi.dev" className="text-text-secondary hover:text-neon-blue transition-colors">
+                  <EnvelopeSimple size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Quick Links</h3>
+              <div className="space-y-2">
+                <a href="/" className="block text-neon-purple hover:text-neon-blue transition-colors">Home</a>
+                <a href="/tech-stack" className="block text-neon-purple hover:text-neon-blue transition-colors">Tech Stack</a>
+                <a href="/education" className="block text-neon-purple hover:text-neon-blue transition-colors">Education</a>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="text-center md:text-right">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Newsletter</h3>
+              <p className="text-text-secondary text-sm mb-4">
+                Subscribe to get updates about new courses and projects.
+              </p>
+              <button className="px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-medium rounded-lg hover:shadow-glow-purple transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-glass-border/20 pt-8 text-center">
+            <p className="text-text-muted">
+              © 2024 Rokibul Islam Robi Portfolio. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
 
