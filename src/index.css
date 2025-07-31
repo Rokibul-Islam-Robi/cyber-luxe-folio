@@ -259,6 +259,7 @@
   .nav-link:hover:after {
     transform: scaleX(1);
   }
+}
 
 @layer base {
   * {
