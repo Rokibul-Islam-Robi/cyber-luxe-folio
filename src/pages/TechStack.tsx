@@ -14,7 +14,7 @@ import {
   Lightning,
   Cpu,
   DeviceMobile,
-  Server
+  HardDrives
 } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -84,11 +84,11 @@ const TechStack = () => {
   ];
 
   const backendTech = [
-    { name: 'Node.js', icon: Server, level: 88, color: 'text-green-400', bg: 'from-green-500/20 to-green-600/20' },
+    { name: 'Node.js', icon: HardDrives, level: 88, color: 'text-green-400', bg: 'from-green-500/20 to-green-600/20' },
     { name: 'Python', icon: Cpu, level: 85, color: 'text-blue-500', bg: 'from-blue-500/20 to-blue-600/20' },
     { name: 'PostgreSQL', icon: Database, level: 82, color: 'text-blue-600', bg: 'from-blue-600/20 to-blue-700/20' },
     { name: 'MongoDB', icon: Database, level: 80, color: 'text-green-500', bg: 'from-green-500/20 to-green-600/20' },
-    { name: 'Express.js', icon: Server, level: 85, color: 'text-gray-400', bg: 'from-gray-500/20 to-gray-600/20' },
+    { name: 'Express.js', icon: HardDrives, level: 85, color: 'text-gray-400', bg: 'from-gray-500/20 to-gray-600/20' },
     { name: 'GraphQL', icon: Globe, level: 78, color: 'text-pink-400', bg: 'from-pink-500/20 to-pink-600/20' }
   ];
 
