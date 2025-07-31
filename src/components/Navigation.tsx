@@ -82,13 +82,13 @@ const Navigation = () => {
           ? 'bg-background/80 backdrop-blur-md border-b border-glass-border/20'
           : 'bg-transparent'
       }`}>
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="container mx-auto px-4 lg:px-6">
+          <div className="flex items-center justify-between h-12 lg:h-14">
             {/* Logo */}
             <div className="nav-logo">
               <Link
                 to="/"
-                className="text-2xl lg:text-3xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
+                className="text-xl lg:text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
               >
                 ROBI
               </Link>
@@ -101,9 +101,15 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`nav-link relative inline-block text-text-secondary hover:text-text-primary transition-all duration-500 ease-out py-2 px-6 mx-1 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/20 ${
-                      location.pathname === item.path ? 'text-neon-blue scale-105 shadow-lg shadow-neon-blue/20' : ''
+                    className={`nav-link relative inline-block text-text-secondary hover:text-text-primary transition-all duration-500 ease-out py-1 px-4 mx-1 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/20 ${
+                      location.pathname === item.path ? 'text-white scale-105 shadow-lg shadow-neon-blue/20' : ''
                     }`}
+                    style={{
+                      background: location.pathname === item.path 
+                        ? 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)' 
+                        : 'transparent',
+                      borderRadius: location.pathname === item.path ? '4px' : '0'
+                    }}
                   >
                     {item.name}
                   </Link>
