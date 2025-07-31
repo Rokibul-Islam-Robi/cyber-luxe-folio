@@ -1,8 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
 import PlanetAnimation from '../components/PlanetAnimation';
+import ProjectCard from '../components/ProjectCard';
+import ProjectManager from '../components/ProjectManager';
+import { getFeaturedProjects, getAllProjects } from '../data/projects';
 import { 
   GithubLogo, 
   Globe, 
@@ -12,13 +15,15 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Link
+  Link,
+  Plus
 } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isProjectManagerOpen, setIsProjectManagerOpen] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -62,101 +67,8 @@ const Projects = () => {
     return () => ctx.revert();
   }, []);
 
-  const featuredProjects = [
-    {
-      id: 1,
-      title: "3D Interactive Email Platform",
-      description: "Modern email solution with 3D animations and developer-focused features. Built with React, Three.js, and GSAP for immersive user experiences.",
-      tech: ["React", "Three.js", "GSAP", "TypeScript"],
-      image: "/lovable-uploads/09356399-4a00-47d5-b816-7991d94860bd.png",
-      github: "https://github.com/tasnia/email-platform",
-      live: "https://email-platform.tasnia.dev",
-      stats: { stars: 45, forks: 12, views: 1200 }
-    },
-    {
-      id: 2,
-      title: "Next-Level Gaming UI",
-      description: "Futuristic gaming interface with advanced 3D elements and smooth animations. Features real-time data visualization and interactive components.",
-      tech: ["React", "WebGL", "TypeScript", "Framer Motion"],
-      image: "/lovable-uploads/62685ee9-0ba7-4378-8471-c27123d43751.png",
-      github: "https://github.com/tasnia/gaming-ui",
-      live: "https://gaming-ui.tasnia.dev",
-      stats: { stars: 78, forks: 23, views: 2100 }
-    },
-    {
-      id: 3,
-      title: "3D Portfolio Website",
-      description: "Immersive portfolio experience with cutting-edge 3D visuals. Showcases projects in an interactive 3D environment with smooth transitions.",
-      tech: ["Spline", "React", "GSAP", "Three.js"],
-      image: "/lovable-uploads/52545b39-a092-42b4-96e0-013af841c7d5.png",
-      github: "https://github.com/tasnia/3d-portfolio",
-      live: "https://3d-portfolio.tasnia.dev",
-      stats: { stars: 156, forks: 34, views: 4500 }
-    }
-  ];
-
-  const allProjects = [
-    {
-      id: 4,
-      title: "Gaming Website Platform",
-      description: "Dynamic gaming platform with interactive character showcases and real-time features.",
-      tech: ["React", "Framer Motion", "CSS3", "Node.js"],
-      image: "/lovable-uploads/3ec37a13-3d91-4dee-9275-c66a34b180e0.png",
-      github: "https://github.com/tasnia/gaming-platform",
-      live: "https://gaming-platform.tasnia.dev",
-      stats: { stars: 32, forks: 8, views: 890 }
-    },
-    {
-      id: 5,
-      title: "Animation Tools Platform",
-      description: "Professional animation tools platform with modern UI design and advanced features.",
-      tech: ["React", "GSAP", "Tailwind", "Express"],
-      image: "/lovable-uploads/4060dd43-2597-48b4-9abe-93c675ecd0fc.png",
-      github: "https://github.com/tasnia/animation-tools",
-      live: "https://animation-tools.tasnia.dev",
-      stats: { stars: 67, forks: 15, views: 1800 }
-    },
-    {
-      id: 6,
-      title: "Developer Portfolio",
-      description: "Clean and modern portfolio design with smooth interactions and responsive layout.",
-      tech: ["HTML", "CSS", "JavaScript", "GSAP"],
-      image: "/lovable-uploads/b3cad411-7107-4c48-8a87-4b066956b466.png",
-      github: "https://github.com/tasnia/portfolio",
-      live: "https://portfolio.tasnia.dev",
-      stats: { stars: 89, forks: 21, views: 3200 }
-    },
-    {
-      id: 7,
-      title: "E-Commerce Dashboard",
-      description: "Comprehensive e-commerce dashboard with analytics, inventory management, and sales tracking.",
-      tech: ["React", "Node.js", "MongoDB", "Chart.js"],
-      image: "/lovable-uploads/09356399-4a00-47d5-b816-7991d94860bd.png",
-      github: "https://github.com/tasnia/ecommerce-dashboard",
-      live: "https://ecommerce-dashboard.tasnia.dev",
-      stats: { stars: 124, forks: 28, views: 4100 }
-    },
-    {
-      id: 8,
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates and team features.",
-      tech: ["React", "Firebase", "TypeScript", "Tailwind"],
-      image: "/lovable-uploads/62685ee9-0ba7-4378-8471-c27123d43751.png",
-      github: "https://github.com/tasnia/task-manager",
-      live: "https://task-manager.tasnia.dev",
-      stats: { stars: 95, forks: 19, views: 2800 }
-    },
-    {
-      id: 9,
-      title: "Weather Dashboard",
-      description: "Real-time weather dashboard with interactive maps and detailed forecasts.",
-      tech: ["React", "OpenWeather API", "Leaflet", "CSS3"],
-      image: "/lovable-uploads/52545b39-a092-42b4-96e0-013af841c7d5.png",
-      github: "https://github.com/tasnia/weather-dashboard",
-      live: "https://weather-dashboard.tasnia.dev",
-      stats: { stars: 73, forks: 16, views: 1900 }
-    }
-  ];
+  const featuredProjects = getFeaturedProjects();
+  const allProjects = getAllProjects();
 
   return (
     <div ref={containerRef} className="relative min-h-screen">
@@ -211,77 +123,21 @@ const Projects = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Featured Projects
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
               Highlighted projects that showcase my expertise in modern web development and innovative design.
             </p>
+            <button
+              onClick={() => setIsProjectManagerOpen(true)}
+              className="neon-button group"
+            >
+              <Plus size={20} className="mr-2" />
+              Add New Project
+            </button>
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <div key={project.id} className="featured-card glass-card p-6 hover:shadow-glow-strong transition-all duration-500 group">
-                <div className="relative overflow-hidden rounded-lg mb-6">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                
-                <h3 className="text-xl font-bold mb-3 text-text-primary group-hover:text-neon-blue transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-text-secondary mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-neon-blue/10 text-neon-blue text-xs rounded-full border border-neon-blue/20">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4 text-sm text-text-secondary">
-                    <div className="flex items-center gap-1">
-                      <Star size={16} />
-                      <span>{project.stats.stars}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Code size={16} />
-                      <span>{project.stats.forks}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Globe size={16} />
-                      <span>{project.stats.views}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-blue border border-glass-border/30 hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <GithubLogo size={16} />
-                    Code
-                  </a>
-                  <a 
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-purple border border-glass-border/30 hover:border-neon-purple/50 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Link size={16} />
-                    Live
-                  </a>
-                </div>
-              </div>
+              <ProjectCard key={project.id} project={project} variant="featured" />
             ))}
           </div>
         </div>
@@ -301,70 +157,7 @@ const Projects = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allProjects.map((project) => (
-              <div key={project.id} className="project-card glass-card p-6 hover:shadow-glow-blue transition-all duration-500 group">
-                <div className="relative overflow-hidden rounded-lg mb-6">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                
-                <h3 className="text-xl font-bold mb-3 text-text-primary group-hover:text-neon-blue transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-text-secondary mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-neon-blue/10 text-neon-blue text-xs rounded-full border border-neon-blue/20">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4 text-sm text-text-secondary">
-                    <div className="flex items-center gap-1">
-                      <Star size={16} />
-                      <span>{project.stats.stars}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Code size={16} />
-                      <span>{project.stats.forks}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Globe size={16} />
-                      <span>{project.stats.views}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-blue border border-glass-border/30 hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <GithubLogo size={16} />
-                    Code
-                  </a>
-                  <a 
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-purple border border-glass-border/30 hover:border-neon-purple/50 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Link size={16} />
-                    Live
-                  </a>
-                </div>
-              </div>
+              <ProjectCard key={project.id} project={project} variant="all" />
             ))}
           </div>
         </div>
@@ -402,6 +195,18 @@ const Projects = () => {
           </p>
         </div>
       </footer>
+
+      {/* Project Manager Modal */}
+      <ProjectManager
+        isOpen={isProjectManagerOpen}
+        onClose={() => setIsProjectManagerOpen(false)}
+        onAddProject={(newProject) => {
+          // Here you would typically save to a database or state management
+          console.log('New project to add:', newProject);
+          // For now, we'll just close the modal
+          setIsProjectManagerOpen(false);
+        }}
+      />
     </div>
   );
 };

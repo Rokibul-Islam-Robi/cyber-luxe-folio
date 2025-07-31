@@ -17,37 +17,9 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Initial navbar animation
-    gsap.fromTo('.navbar',
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.5 }
-    );
-  }, []);
 
-  // Update navigation indicator position based on current page
-  useEffect(() => {
-    const updateIndicator = () => {
-      const navItems = [
-        { path: '/about', index: 0 },
-        { path: '/tech-stack', index: 1 },
-        { path: '/projects', index: 2 },
-        { path: '/education', index: 3 },
-        { path: '/problem-solving', index: 4 }
-      ];
 
-      const currentItem = navItems.find(item => location.pathname === item.path);
-      if (currentItem) {
-        const positions = [0, 90, 180, 275, 380];
-        const indicator = document.querySelector('.nav-indicator') as HTMLElement;
-        if (indicator) {
-          indicator.style.left = `${positions[currentItem.index]}px`;
-        }
-      }
-    };
 
-    updateIndicator();
-  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -104,17 +76,12 @@ const Navigation = () => {
                     className={`nav-link relative inline-block text-text-secondary hover:text-text-primary transition-all duration-500 ease-out py-1 px-4 mx-1 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/20 ${
                       location.pathname === item.path ? 'text-white scale-105 shadow-lg shadow-neon-blue/20' : ''
                     }`}
-                    style={{
-                      background: location.pathname === item.path 
-                        ? 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)' 
-                        : 'transparent',
-                      borderRadius: location.pathname === item.path ? '4px' : '0'
-                    }}
+                    
                   >
                     {item.name}
                   </Link>
                 ))}
-                <span className="nav-indicator absolute bottom-0 h-full bg-gradient-to-r from-neon-blue to-neon-cyan rounded-lg transition-all duration-500 ease-out z-0"></span>
+
               </div>
             </div>
 
