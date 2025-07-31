@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
-import PlanetAnimation from '../components/PlanetAnimation';
 import { 
   GithubLogo, 
   LinkedinLogo, 
@@ -193,14 +192,16 @@ const Portfolio = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Planet Animation Background */}
-      <PlanetAnimation />
-      
-      {/* Floating Background Orbs */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="glow-orb glow-orb-1 w-64 h-64 bg-neon-blue/20 top-20 left-10"></div>
-        <div className="glow-orb glow-orb-2 w-48 h-48 bg-neon-purple/30 top-1/3 right-20"></div>
-        <div className="glow-orb glow-orb-3 w-32 h-32 bg-neon-cyan/25 bottom-1/4 left-1/3"></div>
+      {/* Particle Planet Background Animation */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <iframe 
+          src='https://my.spline.design/particleplanet-5e0fIrNj2I6HQxOgBFekzc02/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="w-full h-full"
+          style={{ filter: 'brightness(0.8) contrast(1.2)' }}
+        />
       </div>
 
       {/* Hero Section */}

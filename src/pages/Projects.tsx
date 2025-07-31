@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
-import PlanetAnimation from '../components/PlanetAnimation';
 import ProjectCard from '../components/ProjectCard';
 import ProjectManager from '../components/ProjectManager';
 import { getFeaturedProjects, getAllProjects } from '../data/projects';
@@ -75,8 +74,17 @@ const Projects = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Planet Animation Background */}
-      <PlanetAnimation />
+      {/* Particle Planet Background Animation */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <iframe 
+          src='https://my.spline.design/particleplanet-5e0fIrNj2I6HQxOgBFekzc02/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="w-full h-full"
+          style={{ filter: 'brightness(0.8) contrast(1.2)' }}
+        />
+      </div>
       
       {/* Floating Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
