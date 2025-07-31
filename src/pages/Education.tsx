@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
@@ -11,13 +11,20 @@ import {
   MapPin,
   Lightbulb,
   Rocket,
-  Medal
+  Medal,
+  Plus
 } from 'phosphor-react';
+import CertificateCard from '../components/CertificateCard';
+import CertificateManager from '../components/CertificateManager';
+import { getCertificates, getWorkshops } from '../data/certificates';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Education = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isCertificateManagerOpen, setIsCertificateManagerOpen] = useState(false);
+  const [isWorkshopManagerOpen, setIsWorkshopManagerOpen] = useState(false);
+  const [managerType, setManagerType] = useState<'certificate' | 'workshop'>('certificate');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -103,50 +110,7 @@ const Education = () => {
     }
   ];
 
-  const certifications = [
-    {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      credential: 'SAA-C03',
-      description: 'Cloud architecture and AWS services expertise'
-    },
-    {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2023',
-      credential: 'GCP-PD-001',
-      description: 'Google Cloud Platform development and deployment'
-    },
-    {
-      name: 'Microsoft Certified: Azure Developer',
-      issuer: 'Microsoft',
-      date: '2022',
-      credential: 'AZ-204',
-      description: 'Azure development and cloud solutions'
-    },
-    {
-      name: 'Certified Scrum Master',
-      issuer: 'Scrum Alliance',
-      date: '2022',
-      credential: 'CSM-001',
-      description: 'Agile project management and team leadership'
-    },
-    {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2021',
-      credential: 'REACT-001',
-      description: 'Advanced React development and best practices'
-    },
-    {
-      name: 'Python Programming Certification',
-      issuer: 'Python Institute',
-      date: '2021',
-      credential: 'PCEP-001',
-      description: 'Python programming fundamentals and advanced concepts'
-    }
-  ];
+
 
   const skills = [
     { name: 'Programming Languages', level: 95, items: ['JavaScript', 'Python', 'Java', 'C++'] },
@@ -266,45 +230,54 @@ const Education = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Professional Certifications
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
               Industry-recognized certifications that validate my expertise in various technologies and methodologies.
             </p>
+            <button
+              onClick={() => {
+                setManagerType('certificate');
+                setIsCertificateManagerOpen(true);
+              }}
+              className="neon-button group"
+            >
+              <Plus size={20} className="mr-2" />
+              Add New Certificate
+            </button>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="certification-card glass-card p-6 hover:shadow-glow-purple transition-all duration-300 group">
-                <div className="flex items-center mb-4">
-                  <div className="glass-card p-3 rounded-lg mr-4">
-                    <Medal size={32} className="text-neon-purple" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-text-primary">{cert.name}</h3>
-                    <p className="text-neon-purple font-medium text-sm">{cert.issuer}</p>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <p className="text-text-secondary text-sm mb-2">{cert.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-text-secondary">Credential ID:</span>
-                    <span className="text-neon-blue font-mono">{cert.credential}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm mt-1">
-                    <span className="text-text-secondary">Issued:</span>
-                    <span className="text-neon-cyan">{cert.date}</span>
-                  </div>
-                </div>
-                
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-neon-purple/10 text-neon-purple text-xs rounded-full border border-neon-purple/20">
-                    Verified
-                  </span>
-                  <span className="px-3 py-1 bg-neon-blue/10 text-neon-blue text-xs rounded-full border border-neon-blue/20">
-                    Active
-                  </span>
-                </div>
-              </div>
+            {getCertificates().map((cert) => (
+              <CertificateCard key={cert.id} certificate={cert} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workshops */}
+      <section className="workshops-section py-20 px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Workshops & Training
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+              Hands-on workshops and training sessions that enhance my skills and knowledge in various technologies.
+            </p>
+            <button
+              onClick={() => {
+                setManagerType('workshop');
+                setIsWorkshopManagerOpen(true);
+              }}
+              className="neon-button group"
+            >
+              <Plus size={20} className="mr-2" />
+              Add New Workshop
+            </button>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {getWorkshops().map((workshop) => (
+              <CertificateCard key={workshop.id} certificate={workshop} />
             ))}
           </div>
         </div>
@@ -385,6 +358,32 @@ const Education = () => {
           </p>
         </div>
       </footer>
+
+      {/* Certificate Manager Modal */}
+      <CertificateManager
+        isOpen={isCertificateManagerOpen}
+        onClose={() => setIsCertificateManagerOpen(false)}
+        onAddCertificate={(newCertificate) => {
+          // Here you would typically save to a database or state management
+          console.log('New certificate to add:', newCertificate);
+          // For now, we'll just close the modal
+          setIsCertificateManagerOpen(false);
+        }}
+        type="certificate"
+      />
+
+      {/* Workshop Manager Modal */}
+      <CertificateManager
+        isOpen={isWorkshopManagerOpen}
+        onClose={() => setIsWorkshopManagerOpen(false)}
+        onAddCertificate={(newWorkshop) => {
+          // Here you would typically save to a database or state management
+          console.log('New workshop to add:', newWorkshop);
+          // For now, we'll just close the modal
+          setIsWorkshopManagerOpen(false);
+        }}
+        type="workshop"
+      />
     </div>
   );
 };
