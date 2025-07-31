@@ -192,18 +192,6 @@ const Portfolio = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Particle Planet Background Animation */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <iframe 
-          src='https://my.spline.design/particleplanet-5e0fIrNj2I6HQxOgBFekzc02/' 
-          frameBorder='0' 
-          width='100%' 
-          height='100%'
-          className="w-full h-full"
-          style={{ filter: 'brightness(0.8) contrast(1.2)' }}
-        />
-      </div>
-
       {/* Hero Section */}
       <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
