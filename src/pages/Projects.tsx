@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
 import { 
   GithubLogo, 
-  ExternalLink, 
-  Star,
-  Eye,
-  Fork,
+  Globe, 
+  Star, 
   Calendar,
+  MapPin,
+  Lightbulb,
+  Rocket,
   Code,
-  Globe,
-  Rocket
+  Link
 } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -247,11 +247,11 @@ const Projects = () => {
                       <span>{project.stats.stars}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Fork size={16} />
+                      <Code size={16} />
                       <span>{project.stats.forks}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Eye size={16} />
+                      <Globe size={16} />
                       <span>{project.stats.views}</span>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-purple border border-glass-border/30 hover:border-neon-purple/50 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    <ExternalLink size={16} />
+                    <Link size={16} />
                     Live
                   </a>
                 </div>
@@ -330,11 +330,11 @@ const Projects = () => {
                       <span>{project.stats.stars}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Fork size={16} />
+                      <Code size={16} />
                       <span>{project.stats.forks}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Eye size={16} />
+                      <Globe size={16} />
                       <span>{project.stats.views}</span>
                     </div>
                   </div>
@@ -356,7 +356,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex-1 glass-card py-2 text-sm font-medium text-text-primary hover:text-neon-purple border border-glass-border/30 hover:border-neon-purple/50 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    <ExternalLink size={16} />
+                    <Link size={16} />
                     Live
                   </a>
                 </div>

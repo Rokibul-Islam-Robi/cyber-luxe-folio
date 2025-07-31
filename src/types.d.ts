@@ -11,4 +11,15 @@ declare module 'd3-scale' {}
 
 // Global type declarations for other libraries
 declare module 'estree' {}
-declare module 'node' {} 
+declare module 'node' {}
+
+// React module declarations
+declare module 'react' {
+  export = React;
+  export as namespace React;
+}
+
+declare module 'react-dom' {
+  export = ReactDOM;
+  export as namespace ReactDOM;
+} 

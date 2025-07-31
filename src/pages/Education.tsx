@@ -1,18 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
 import { 
   GraduationCap, 
-  Certificate, 
   BookOpen, 
   Trophy,
   Star,
   Calendar,
   MapPin,
-  Award,
   Lightbulb,
-  Rocket
+  Rocket,
+  Medal
 } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -198,8 +197,8 @@ const Education = () => {
               <BookOpen size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
             </button>
             <button className="glass-card px-8 py-3 border border-glass-border/30 text-text-primary hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center">
-              <Certificate size={20} className="mr-2" />
-              View Certificates
+                              <Medal size={20} className="mr-2" />
+                View Certificates
             </button>
           </div>
         </div>
@@ -281,7 +280,7 @@ const Education = () => {
               <div key={index} className="certification-card glass-card p-6 hover:shadow-glow-purple transition-all duration-300 group">
                 <div className="flex items-center mb-4">
                   <div className="glass-card p-3 rounded-lg mr-4">
-                    <Certificate size={32} className="text-neon-purple" />
+                    <Medal size={32} className="text-neon-purple" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-text-primary">{cert.name}</h3>

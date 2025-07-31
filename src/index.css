@@ -132,7 +132,6 @@
     left: 100%;
   }
   
-<<<<<<< HEAD
   /* 3D Navigation Animation */
   .nav-container {
     position: relative;
@@ -211,9 +210,6 @@
   .nav-container .nav-link:nth-child(5).active ~ .nav-indicator {
     left: 380px;
   }
-  
-=======
->>>>>>> bbfdc1453b41acf4e2e1177170b72fe87083e169
   /* Floating Animation */
   .float-animation {
     animation: float 6s ease-in-out infinite;
