@@ -240,7 +240,27 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left relative overflow-hidden rounded-xl">
+            {/* Video Background for Intro Text Section */}
+            <div className="absolute inset-0 z-0">
+              <video 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                className="w-full h-full object-cover opacity-30"
+                style={{ filter: 'blur(1px)' }}
+              >
+                <source src="/videos/particle-planet.mp4" type="video/mp4" />
+                <source src="/videos/particle-planet.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Overlay to ensure text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40"></div>
+            </div>
+            
+            {/* Content with higher z-index */}
+            <div className="relative z-10">
             <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Hi, I'm{' '}
               <span className="text-white">Rokibul Islam Robi</span>
@@ -270,6 +290,7 @@ const Portfolio = () => {
                   Download CV
                 </a>
               </CVPreview>
+            </div>
             </div>
           </div>
           
