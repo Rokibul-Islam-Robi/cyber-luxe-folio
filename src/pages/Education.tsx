@@ -31,52 +31,52 @@ const Education = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero animations
-      gsap.fromTo('.education-hero-title', 
-        { opacity: 0, y: 60, filter: 'blur(10px)' },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out', delay: 0.3 }
-      );
+      // Hero animations - DISABLED
+      // gsap.fromTo('.education-hero-title', 
+      //   { opacity: 0, y: 60, filter: 'blur(10px)' },
+      //   { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out', delay: 0.3 }
+      // );
 
-      gsap.fromTo('.education-hero-subtitle', 
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.6 }
-      );
+      // gsap.fromTo('.education-hero-subtitle', 
+      //   { opacity: 0, y: 40 },
+      //   { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.6 }
+      // );
 
-      // Education timeline animations
-      ScrollTrigger.create({
-        trigger: '.education-timeline',
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.fromTo('.timeline-item', 
-            { opacity: 0, x: -60 },
-            { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', stagger: 0.2 }
-          );
-        }
-      });
+      // Education timeline animations - DISABLED
+      // ScrollTrigger.create({
+      //   trigger: '.education-timeline',
+      //   start: 'top 80%',
+      //   onEnter: () => {
+      //     gsap.fromTo('.timeline-item', 
+      //       { opacity: 0, x: -60 },
+      //       { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', stagger: 0.2 }
+      //     );
+      //   }
+      // });
 
-      // Certifications animations
-      ScrollTrigger.create({
-        trigger: '.certifications-section',
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.fromTo('.certification-card', 
-            { opacity: 0, y: 40, scale: 0.8 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)', stagger: 0.1 }
-          );
-        }
-      });
+      // Certifications animations - DISABLED
+      // ScrollTrigger.create({
+      //   trigger: '.certifications-section',
+      //   start: 'top 80%',
+      //   onEnter: () => {
+      //     gsap.fromTo('.certification-card', 
+      //       { opacity: 0, y: 40, scale: 0.8 },
+      //       { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)', stagger: 0.1 }
+      //     );
+      //   }
+      // });
 
-      // Skills animations
-      ScrollTrigger.create({
-        trigger: '.skills-section',
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.fromTo('.skill-item', 
-            { opacity: 0, y: 30, filter: 'blur(3px)' },
-            { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out', stagger: 0.1 }
-          );
-        }
-      });
+      // Skills animations - DISABLED
+      // ScrollTrigger.create({
+      //   trigger: '.skills-section',
+      //   start: 'top 80%',
+      //   onEnter: () => {
+      //     gsap.fromTo('.skill-item', 
+      //       { opacity: 0, y: 30, filter: 'blur(3px)' },
+      //       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out', stagger: 0.1 }
+      //     );
+      //   }
+      // });
 
     }, containerRef);
 
