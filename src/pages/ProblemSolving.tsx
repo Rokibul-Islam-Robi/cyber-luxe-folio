@@ -221,12 +221,8 @@ const ProblemSolving = () => {
             </span>
           </div>
           
-          <h1 className="problem-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Algorithmic <span className="text-gradient">Problem</span>
-            <br />
-            <span className="text-text-secondary text-3xl md:text-4xl lg:text-5xl">
-              Solving
-            </span>
+          <h1 className="problem-hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            Algorithmic Problem Solving
           </h1>
           
           <p className="problem-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
@@ -268,8 +264,8 @@ const ProblemSolving = () => {
       <section className="platforms-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Coding <span className="text-gradient">Platforms</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Coding Platforms
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               My performance across various competitive programming and coding challenge platforms.
@@ -313,8 +309,8 @@ const ProblemSolving = () => {
       <section className="solutions-section py-20 px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Featured <span className="text-gradient">Solutions</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Featured Solutions
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Selected solutions showcasing different algorithmic approaches and optimization techniques.
