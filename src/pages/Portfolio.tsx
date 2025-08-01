@@ -105,22 +105,22 @@ const Portfolio = () => {
         }
       });
 
-      // Certificates section animations
-      ScrollTrigger.create({
-        trigger: '.certificates-section',
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.fromTo('.certificates-section h2', 
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
-          );
+      // Certificates section animations - DISABLED
+      // ScrollTrigger.create({
+      //   trigger: '.certificates-section',
+      //   start: 'top 80%',
+      //   onEnter: () => {
+      //     gsap.fromTo('.certificates-section h2', 
+      //       { opacity: 0, y: 50 },
+      //       { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      //     );
 
-          gsap.fromTo('.certificates-section .certification-card', 
-            { opacity: 0, y: 60, scale: 0.9 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.7)', stagger: 0.2, delay: 0.3 }
-          );
-        }
-      });
+      //     gsap.fromTo('.certificates-section .certification-card', 
+      //       { opacity: 0, y: 60, scale: 0.9 },
+      //       { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.7)', stagger: 0.2, delay: 0.3 }
+      //     );
+      //   }
+      // });
 
       // Contact info section animations - DISABLED
       // ScrollTrigger.create({
