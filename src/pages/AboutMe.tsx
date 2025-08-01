@@ -147,7 +147,7 @@ const AboutMe = () => {
                 Hi, I'm Rokibul Islam Robi
               </h1>
               
-              <p className="about-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-2xl">
+              <p className="about-hero-subtitle text-white text-lg md:text-xl mb-8 max-w-2xl">
                 A passionate software engineer with a love for creating innovative solutions and pushing the boundaries of technology. 
                 I believe in writing clean, efficient code and building products that make a difference.
               </p>
@@ -268,7 +268,7 @@ const AboutMe = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               My Skills
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               A combination of technical expertise and soft skills that drive success in every project.
             </p>
           </div>
@@ -299,7 +299,7 @@ const AboutMe = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Work Experience
             </h2>
-            <p className="text-text-secondary text-lg">
+            <p className="text-white text-lg">
               My professional journey in software development and technology.
             </p>
           </div>
@@ -325,7 +325,7 @@ const AboutMe = () => {
       <footer className="py-12 px-6 lg:px-8 border-t border-glass-border/20">
         <div className="container mx-auto text-center">
           <p className="text-text-muted mb-4">
-            © 2024 TASNIA. All rights reserved.
+            © Rokibul Islam Robi. All rights reserved.
           </p>
         </div>
       </footer>

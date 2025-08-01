@@ -225,7 +225,7 @@ const ProblemSolving = () => {
             Algorithmic Problem Solving
           </h1>
           
-          <p className="problem-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="problem-hero-subtitle text-white text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             A showcase of my problem-solving skills, algorithmic thinking, and competitive programming achievements. 
             From data structures to advanced algorithms, I tackle complex challenges with efficient solutions.
           </p>
@@ -267,7 +267,7 @@ const ProblemSolving = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Coding Platforms
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               My performance across various competitive programming and coding challenge platforms.
             </p>
           </div>
@@ -312,7 +312,7 @@ const ProblemSolving = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Featured Solutions
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Selected solutions showcasing different algorithmic approaches and optimization techniques.
             </p>
           </div>

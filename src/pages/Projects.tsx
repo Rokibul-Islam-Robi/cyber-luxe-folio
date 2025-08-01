@@ -100,7 +100,7 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h1>
           
-          <p className="projects-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="projects-hero-subtitle text-white text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             A showcase of my latest work in web development, 3D experiences, and innovative digital solutions. 
             Each project represents a unique challenge and creative solution.
           </p>
@@ -125,7 +125,7 @@ const Projects = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Featured Projects
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-white text-lg max-w-2xl mx-auto mb-8">
               Highlighted projects that showcase my expertise in modern web development and innovative design.
             </p>
             <button
@@ -152,7 +152,7 @@ const Projects = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               All Projects
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               A comprehensive collection of my work, from small experiments to large-scale applications.
             </p>
           </div>

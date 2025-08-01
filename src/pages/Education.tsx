@@ -151,7 +151,7 @@ const Education = () => {
             My Educational Journey
           </h1>
           
-          <p className="education-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="education-hero-subtitle text-white text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             A comprehensive overview of my academic background, certifications, and continuous learning journey 
             in the field of computer science and software development.
           </p>
@@ -183,7 +183,7 @@ const Education = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Academic Background
             </h2>
-            <p className="text-text-secondary text-lg">
+            <p className="text-white text-lg">
               My formal education and academic achievements in computer science and technology.
             </p>
           </div>
@@ -242,7 +242,7 @@ const Education = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Professional Certifications
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-white text-lg max-w-2xl mx-auto mb-8">
               Industry-recognized certifications that validate my expertise in various technologies and methodologies.
             </p>
             <button
@@ -272,7 +272,7 @@ const Education = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Workshops & Training
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-white text-lg max-w-2xl mx-auto mb-8">
               Hands-on workshops and training sessions that enhance my skills and knowledge in various technologies.
             </p>
             <button
@@ -302,7 +302,7 @@ const Education = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Skills & Competencies
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Technical and soft skills developed through education, certifications, and hands-on experience.
             </p>
           </div>
