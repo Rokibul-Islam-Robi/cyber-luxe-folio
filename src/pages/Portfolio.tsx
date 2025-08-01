@@ -250,8 +250,8 @@ const Portfolio = () => {
               </span>
             </h1>
             
-            <p className="hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-2xl">
-              Crafting digital experiences that inspire and engage through innovative design and cutting-edge technology.
+            <p className="hero-subtitle text-white text-lg md:text-xl mb-8 max-w-2xl">
+              Data Analyst | SQL | Java & Spring Boot | Flutter | Power BI Tech Enthusiastic
             </p>
             
             <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -346,7 +346,7 @@ const Portfolio = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Contact Information
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Get in touch with me for collaborations, opportunities, or just to say hello.
             </p>
           </div>

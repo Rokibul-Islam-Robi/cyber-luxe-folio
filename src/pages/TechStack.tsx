@@ -133,7 +133,7 @@ const TechStack = () => {
             My Technology Stack
           </h1>
           
-          <p className="tech-hero-subtitle text-text-secondary text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="tech-hero-subtitle text-white text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             A comprehensive collection of modern technologies and tools I use to build innovative solutions. 
             From frontend frameworks to backend services, I stay current with the latest industry standards.
           </p>
@@ -147,7 +147,7 @@ const TechStack = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Frontend Technologies
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Modern frameworks and libraries for creating responsive and interactive user interfaces.
             </p>
           </div>
@@ -183,7 +183,7 @@ const TechStack = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Backend Technologies
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Server-side technologies and databases for building robust and scalable applications.
             </p>
           </div>
@@ -219,7 +219,7 @@ const TechStack = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Tools & Platforms
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Essential tools and platforms that streamline my development workflow and enhance productivity.
             </p>
           </div>
