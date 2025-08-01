@@ -120,17 +120,17 @@ const Portfolio = () => {
         }
       });
 
-      // Contact info section animations
-      ScrollTrigger.create({
-        trigger: '.contact-info-section',
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.fromTo('.corporate-contact-card', 
-            { opacity: 0, y: 60, scale: 0.95 },
-            { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' }
-          );
-        }
-      });
+      // Contact info section animations - DISABLED
+      // ScrollTrigger.create({
+      //   trigger: '.contact-info-section',
+      //   start: 'top 80%',
+      //   onEnter: () => {
+      //     gsap.fromTo('.corporate-contact-card', 
+      //       { opacity: 0, y: 60, scale: 0.95 },
+      //       { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' }
+      //     );
+      //   }
+      // });
 
       // Projects section animations
       ScrollTrigger.create({
@@ -300,7 +300,7 @@ const Portfolio = () => {
                 About Me
               </h2>
               
-              <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+              <p className="text-white text-lg mb-8 leading-relaxed">
                 I'm a passionate software engineer with expertise in modern web technologies. 
                 I specialize in building scalable applications and creating immersive user experiences 
                 through innovative design and cutting-edge technology.
@@ -510,7 +510,7 @@ const Portfolio = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Featured Projects
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               A showcase of my latest work in web development, 3D experiences, and innovative digital solutions.
             </p>
           </div>
@@ -559,7 +559,7 @@ const Portfolio = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Certificates & Workshops
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Industry-recognized certifications and hands-on workshops that validate my expertise in various technologies.
             </p>
           </div>
@@ -599,7 +599,7 @@ const Portfolio = () => {
           <div className="text-center mt-12">
             <a 
               href="/education" 
-              className="neon-button group"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg border-2 border-neon-blue/30 hover:border-neon-blue/60 transition-all duration-300 shadow-lg hover:shadow-glow-blue"
             >
               View All Certificates
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -615,7 +615,7 @@ const Portfolio = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Get In Touch
             </h2>
-            <p className="text-text-secondary text-lg">
+            <p className="text-white text-lg">
               Ready to bring your ideas to life? Let's discuss your next project.
             </p>
           </div>

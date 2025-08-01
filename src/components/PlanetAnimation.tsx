@@ -6,7 +6,7 @@ const PlanetAnimation = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Create floating particles with different colors
+      // Create floating particles with different colors (STATIC - NO ANIMATION)
       const particles = [];
       const particleCount = 100;
       const colors = ['bg-neon-blue/40', 'bg-orange-400/40', 'bg-yellow-400/40', 'bg-green-400/40'];
@@ -20,42 +20,42 @@ const PlanetAnimation = () => {
         containerRef.current?.appendChild(particle);
         particles.push(particle);
 
-        // Animate each particle with more varied movement
-        gsap.to(particle, {
-          y: Math.random() * 200 - 100,
-          x: Math.random() * 200 - 100,
-          duration: Math.random() * 15 + 10,
-          repeat: -1,
-          ease: 'none',
-          delay: Math.random() * 10
-        });
+        // NO ANIMATION - particles remain static
+        // gsap.to(particle, {
+        //   y: Math.random() * 200 - 100,
+        //   x: Math.random() * 200 - 100,
+        //   duration: Math.random() * 15 + 10,
+        //   repeat: -1,
+        //   ease: 'none',
+        //   delay: Math.random() * 10
+        // });
       }
 
-      // Animate the main planet
-      gsap.to('.planet-core', {
-        rotation: 360,
-        duration: 20,
-        repeat: -1,
-        ease: 'none'
-      });
+      // NO ANIMATION - planet remains static
+      // gsap.to('.planet-core', {
+      //   rotation: 360,
+      //   duration: 20,
+      //   repeat: -1,
+      //   ease: 'none'
+      // });
 
-      // Animate the planet rings
-      gsap.to('.planet-ring', {
-        rotation: -360,
-        duration: 15,
-        repeat: -1,
-        ease: 'none'
-      });
+      // NO ANIMATION - planet rings remain static
+      // gsap.to('.planet-ring', {
+      //   rotation: -360,
+      //   duration: 15,
+      //   repeat: -1,
+      //   ease: 'none'
+      // });
 
-      // Animate the glow effect
-      gsap.to('.planet-glow', {
-        scale: 1.2,
-        opacity: 0.5,
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut'
-      });
+      // NO ANIMATION - glow effect remains static
+      // gsap.to('.planet-glow', {
+      //   scale: 1.2,
+      //   opacity: 0.5,
+      //   duration: 3,
+      //   repeat: -1,
+      //   yoyo: true,
+      //   ease: 'power1.inOut'
+      // });
 
     }, containerRef);
 
