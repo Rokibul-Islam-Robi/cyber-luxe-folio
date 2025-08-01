@@ -20,6 +20,8 @@ import {
 import CertificateCard from '../components/CertificateCard';
 import CertificateManager from '../components/CertificateManager';
 import { getCertificates, getWorkshops } from '../data/certificates';
+import { cvLinks } from '../data/cv';
+import CVPreview from '../components/CVPreview';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,13 +157,20 @@ const Education = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="neon-button group">
-              Download Resume
-              <BookOpen size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
-            </button>
+            <CVPreview type="resume">
+              <a 
+                href={cvLinks.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neon-button group"
+              >
+                Download Resume
+                <BookOpen size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
+              </a>
+            </CVPreview>
             <button className="glass-card px-8 py-3 border border-glass-border/30 text-text-primary hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center">
-                              <Medal size={20} className="mr-2" />
-                View Certificates
+              <Medal size={20} className="mr-2" />
+              View Certificates
             </button>
           </div>
         </div>

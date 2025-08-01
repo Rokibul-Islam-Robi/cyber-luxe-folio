@@ -13,6 +13,8 @@ import {
   BookOpen,
   Coffee
 } from 'phosphor-react';
+import { cvLinks } from '../data/cv';
+import CVPreview from '../components/CVPreview';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,10 +153,17 @@ const AboutMe = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="neon-button group">
-                  Download Resume
-                  <BookOpen size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
-                </button>
+                <CVPreview type="resume">
+                  <a 
+                    href={cvLinks.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="neon-button group"
+                  >
+                    Download Resume
+                    <BookOpen size={20} className="ml-2 inline transition-transform group-hover:translate-x-1" />
+                  </a>
+                </CVPreview>
                 <button className="glass-card px-8 py-3 border border-glass-border/30 text-text-primary hover:border-neon-blue/50 transition-all duration-300 flex items-center justify-center">
                   <Coffee size={20} className="mr-2" />
                   Let's Chat
