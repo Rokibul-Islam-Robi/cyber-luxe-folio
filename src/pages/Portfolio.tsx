@@ -625,37 +625,37 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" ref={contactRef} className="py-20 px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+      <section id="contact" ref={contactRef} className="py-24 px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8" style={{ background: 'linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(271 81% 56%) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Get In Touch
             </h2>
-            <p className="text-white text-lg">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               Ready to bring your ideas to life? Let's discuss your next project.
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
             <div className="contact-info">
-              <h3 className="text-2xl font-bold mb-6 text-text-primary">Let's Connect</h3>
-              <p className="text-text-secondary mb-8 leading-relaxed">
+              <h3 className="text-3xl font-bold mb-8 text-text-primary">Let's Connect</h3>
+              <p className="text-text-secondary mb-10 leading-relaxed text-lg">
                 I'm always interested in hearing about new opportunities and creative projects. 
                 Whether you have a question or just want to say hello, feel free to drop me a line.
               </p>
               
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 p-4 glass-card rounded-lg hover:shadow-glow-blue transition-all duration-300">
                   <div className="glass-card p-3 rounded-lg">
                     <EnvelopeSimple size={24} className="text-neon-blue" />
                   </div>
                   <div>
                     <p className="text-text-primary font-medium">Email</p>
-                    <p className="text-text-secondary">hello@rokibulrobi.dev</p>
+                    <p className="text-text-secondary">rokebul.islam088@gmail.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-4 glass-card rounded-lg hover:shadow-glow-purple transition-all duration-300">
                   <div className="glass-card p-3 rounded-lg">
                     <GithubLogo size={24} className="text-neon-purple" />
                   </div>
@@ -665,7 +665,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-4 glass-card rounded-lg hover:shadow-glow-cyan transition-all duration-300">
                   <div className="glass-card p-3 rounded-lg">
                     <LinkedinLogo size={24} className="text-neon-cyan" />
                   </div>
@@ -677,36 +677,37 @@ const Portfolio = () => {
               </div>
             </div>
             
-            <div className="contact-form glass-card p-8">
+            <div className="contact-form glass-card p-10">
+              <h3 className="text-2xl font-bold mb-8 text-text-primary text-center">Send Message</h3>
               <form className="space-y-6">
                 <div>
-                  <label className="block text-text-primary font-medium mb-2">Name</label>
+                  <label className="block text-text-primary font-medium mb-3">Name</label>
                   <input 
                     type="text" 
-                    className="input-glow w-full px-4 py-3 rounded-lg text-text-primary placeholder-text-muted"
+                    className="input-glow w-full px-4 py-4 rounded-lg text-text-primary placeholder-text-muted"
                     placeholder="Your name"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-text-primary font-medium mb-2">Email</label>
+                  <label className="block text-text-primary font-medium mb-3">Email</label>
                   <input 
                     type="email" 
-                    className="input-glow w-full px-4 py-3 rounded-lg text-text-primary placeholder-text-muted"
+                    className="input-glow w-full px-4 py-4 rounded-lg text-text-primary placeholder-text-muted"
                     placeholder="your@email.com"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-text-primary font-medium mb-2">Message</label>
+                  <label className="block text-text-primary font-medium mb-3">Message</label>
                   <textarea 
-                    rows={4}
-                    className="input-glow w-full px-4 py-3 rounded-lg text-text-primary placeholder-text-muted resize-none"
+                    rows={5}
+                    className="input-glow w-full px-4 py-4 rounded-lg text-text-primary placeholder-text-muted resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
                 
-                <button type="submit" className="neon-button w-full">
+                <button type="submit" className="neon-button w-full py-4 text-lg font-semibold">
                   Send Message
                 </button>
               </form>
