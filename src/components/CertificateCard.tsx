@@ -1,4 +1,4 @@
-import { LinkedinLogo, Calendar, Medal, ExternalLink } from 'phosphor-react';
+import { LinkedinLogo, Calendar, Medal, Link } from 'phosphor-react';
 import { Certificate } from '../data/certificates';
 
 interface CertificateCardProps {
@@ -74,7 +74,7 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
       >
         <LinkedinLogo size={16} className="transition-transform duration-300 group-hover:scale-110" />
         View on LinkedIn
-        <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" />
+        <Link size={16} className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" />
       </a>
     </div>
   );
