@@ -135,8 +135,8 @@ const AboutMe = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <div className="text-center lg:text-left lg:pr-8">
               <div className="mb-6">
                 <span className="inline-block px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/20 text-neon-blue text-sm font-medium mb-6">
                   About Me
@@ -171,7 +171,7 @@ const AboutMe = () => {
               </div>
             </div>
             
-            <div className="about-image">
+            <div className="about-image lg:pl-8">
               <div className="relative w-80 h-80 mx-auto lg:mx-0">
                 <div className="glass-card p-8 rounded-full">
                   <img 
